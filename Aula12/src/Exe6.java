@@ -12,10 +12,11 @@ public class Exe6 {
             System.out.println("Sexo masculino");
         } else if (sexo == 'F') {
             System.out.println("Sexo feminino");
-        } else {
+        } else if (sexo == 'I') {
             System.out.println("Sexo não informado");
-
-            teclado.close();
+        } else {
+            System.out.println("Valor invalido");
         }
+        teclado.close();
     }
 }   
