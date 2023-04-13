@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
 public class Exe1 {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
         int A,
-                B,
-                C,
-                D;
+            B,
+            C,
+            D;
 
         A = teclado.nextInt();
         B = teclado.nextInt();
@@ -15,9 +15,9 @@ public class Exe1 {
         D = teclado.nextInt();
 
         if (B > C && D > A && (C + D) > (A + B) && C > 0 && D > 0 && (A % 2) == 0) {
-            System.out.println("Número aceito");
+            System.out.println("Valores aceitos");
         } else {
-            System.out.println("Número não aceito");
+            System.out.println("Valores nao aceitos");
         }
         teclado.close();
     }

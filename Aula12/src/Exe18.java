@@ -6,8 +6,6 @@ public class Exe18 {
         Scanner teclado = new Scanner(System.in);
         DecimalFormat df_2 = new DecimalFormat("0.00");
 
-        teclado.close();
-
         System.out.println("Digite a data de vencimento");
         int vencimento = teclado.nextInt();
 
