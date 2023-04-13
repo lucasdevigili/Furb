@@ -10,15 +10,15 @@ public class Exe5 {
         inicio = teclado.nextInt();
         fim = teclado.nextInt();
 
-        if (inicio == fim) {
-            System.out.println("O JOGO DUROU 24 HORA(S)");
-        } else if (inicio < fim) {
-            int tempo = fim - inicio;
-            
-            System.out.println("O JOGO DUROU " + tempo + " HORA(S)");
-        } else if (inicio > fim) {
-            int temp = 
+        int tempo;
+
+        if (inicio < fim) {
+             tempo = fim - inicio;
+        } else {
+             tempo = 24 - inicio + fim;
         }
+
+        System.out.println("O JOGO DUROU " + tempo + " HORAS");
 
         teclado.close();
     }
