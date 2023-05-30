@@ -6,7 +6,7 @@ public class Matrizes {
 
         //Matrizes => Array - Bidimencional
 
-        //Declarção: tipo[][] nome[][] = new tipo[][]
+        //Declarção: tipo[][] nome[][] = new tipo[L][C]
 
         //EX:
         int M[][] = new int[5][10];

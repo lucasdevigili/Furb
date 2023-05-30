@@ -1,9 +1,32 @@
 package URI;
 
+import java.util.Scanner;
+
 public class Exe1175 {
+
     public static void main(String[] args) {
-        
-        int[] N = new int[20];
-        
+        Scanner teclado = new Scanner(System.in);
+
+        int N[] = new int[20];
+        for (int i = 0; i < 20; i++)
+            N[i] = teclado.nextInt();
+
+        inverteVetor(N);
+        imprimeVetor(N);
+        teclado.close();
+    }
+
+    public static void inverteVetor(int[] vetor) {
+        int tamanho = vetor.length;
+        for (int i = 0; i < tamanho / 2; i++) {
+            int temp = vetor[i];
+            vetor[i] = vetor[tamanho - 1 - i];
+            vetor[tamanho - 1 - i] = temp;
+        }
+    }
+
+    public static void imprimeVetor(int[] vetor) {
+        for (int i = 0; i < vetor.length; i++)
+            System.out.println("N[" + i + "] = " + vetor[i]);
     }
 }
