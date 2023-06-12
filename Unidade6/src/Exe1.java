@@ -11,14 +11,14 @@ public class Exe1 {
     }
     
     public static void lerNumeros(int[] vetor) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         
         System.out.println("Digite 10 números inteiros:");
         for (int i = 0; i < vetor.length; i++) {
-            vetor[i] = scanner.nextInt();
+            vetor[i] = teclado.nextInt();
         }
         
-        scanner.close();
+        teclado.close();
     }
     
     public static void escreverNumerosInversos(int[] vetor) {

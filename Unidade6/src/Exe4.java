@@ -21,19 +21,19 @@ public class Exe4 {
     }
     
     public static void lerValores(int[] vetor1, int[] vetor2) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         
         System.out.println("Digite os valores do vetor 1:");
         for (int i = 0; i < vetor1.length; i++) {
-            vetor1[i] = scanner.nextInt();
+            vetor1[i] = teclado.nextInt();
         }
         
         System.out.println("Digite os valores do vetor 2:");
         for (int i = 0; i < vetor2.length; i++) {
-            vetor2[i] = scanner.nextInt();
+            vetor2[i] = teclado.nextInt();
         }
         
-        scanner.close();
+        teclado.close();
     }
     
     public static void somarVetores(int[] vetor1, int[] vetor2, int[] vetor3) {

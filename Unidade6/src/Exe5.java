@@ -14,15 +14,15 @@ public class Exe5 {
     }
     
     public static void lerRespostas(String[] vetor, String pessoa) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         
         System.out.println("Respostas do " + pessoa + ":");
         for (int i = 0; i < vetor.length; i++) {
             System.out.print("Pergunta " + (i+1) + ": ");
-            vetor[i] = scanner.nextLine();
+            vetor[i] = teclado.nextLine();
         }
         
-        scanner.close();
+        teclado.close();
     }
     
     public static int calcularAfinidade(String[] respostasRapaz, String[] respostasMoca) {

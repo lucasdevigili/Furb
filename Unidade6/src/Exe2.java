@@ -13,14 +13,14 @@ public class Exe2 {
     }
     
     public static void lerValores(double[] vetor) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         
         System.out.println("Digite 12 valores reais:");
         for (int i = 0; i < vetor.length; i++) {
-            vetor[i] = scanner.nextDouble();
+            vetor[i] = teclado.nextDouble();
         }
         
-        scanner.close();
+        teclado.close();
     }
     
     public static double calcularMedia(double[] vetor) {

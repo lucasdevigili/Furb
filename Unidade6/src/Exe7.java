@@ -3,37 +3,36 @@ import java.util.Scanner;
 
 public class Exe7 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         
         System.out.print("Informe a quantidade de valores (N): ");
-        int N = scanner.nextInt();
+        int N = teclado.nextInt();
         
         if (N > 20) {
             System.out.println("O valor informado excede o limite de 20 posições.");
-            return;
         }
         
         int[] vetor = new int[N];
         
-        preencherVetor(vetor); // Chama o método para preencher o vetor
+        preencherVetor(vetor);
         
         System.out.println("Vetor original: " + Arrays.toString(vetor));
         
-        ordenarVetor(vetor); // Chama o método para ordenar o vetor
+        ordenarVetor(vetor);
         
         System.out.println("Vetor ordenado: " + Arrays.toString(vetor));
         
-        scanner.close();
+        teclado.close();
     }
     
     public static void preencherVetor(int[] vetor) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         
         System.out.println("Digite os valores para preencher o vetor:");
         
         for (int i = 0; i < vetor.length; i++) {
             System.out.print("Valor " + (i+1) + ": ");
-            int valor = scanner.nextInt();
+            int valor = teclado.nextInt();
             
             if (!verificarExistencia(vetor, valor, i)) {
                 vetor[i] = valor;
@@ -43,7 +42,7 @@ public class Exe7 {
             }
         }
         
-        scanner.close();
+        teclado.close();
     }
     
     public static boolean verificarExistencia(int[] vetor, int valor, int indice) {

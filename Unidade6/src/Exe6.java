@@ -2,17 +2,17 @@ import java.util.Scanner;
 
 public class Exe6 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         
         System.out.print("Informe a quantidade de valores (N): ");
-        int N = scanner.nextInt();
+        int N = teclado.nextInt();
         
         double[] vetor = new double[N];
         
         lerVetor(vetor);
 
         System.out.print("Informe um valor real: ");
-        double valor = scanner.nextDouble();
+        double valor = teclado.nextDouble();
         
         boolean encontrado = encontrarValor(vetor, valor);
         
@@ -22,18 +22,18 @@ public class Exe6 {
             System.out.println("O valor " + valor + " não está cadastrado no vetor.");
         }
         
-        scanner.close();
+        teclado.close();
     }
     
     public static void lerVetor(double[] vetor) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         
         System.out.println("Informe os valores do vetor:");
         for (int i = 0; i < vetor.length; i++) {
-            vetor[i] = scanner.nextDouble();
+            vetor[i] = teclado.nextDouble();
         }
         
-        scanner.close();
+        teclado.close();
     }
     
     public static boolean encontrarValor(double[] vetor, double valor) {

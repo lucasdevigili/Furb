@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Exe9 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
 
         int totalClientes = 30;
         int somaNotas = 0;
@@ -16,13 +16,13 @@ public class Exe9 {
             System.out.println("Cliente " + i + ":");
 
             System.out.print("Sexo (1 - feminino, 2 - masculino): ");
-            int sexo = scanner.nextInt();
+            int sexo = teclado.nextInt();
 
             System.out.print("Nota (0 a 10): ");
-            int nota = scanner.nextInt();
+            int nota = teclado.nextInt();
 
             System.out.print("Idade: ");
-            int idade = scanner.nextInt();
+            int idade = teclado.nextInt();
 
             somaNotas += nota;
 
@@ -49,6 +49,6 @@ public class Exe9 {
         System.out.println("Nota atribuída pela mulher mais jovem: " + notaMulherMaisJovem);
         System.out.println("Quantidade de mulheres com mais de 50 anos que deram nota superior à média: " + contMulheresMais50);
 
-        scanner.close();
+        teclado.close();
     }
 }

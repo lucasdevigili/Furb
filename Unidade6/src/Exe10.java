@@ -6,14 +6,14 @@ public class Exe10 {
     private static int tamanho = 0;
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
 
         int opcao;
 
         do {
             exibirMenu();
             System.out.print("Digite a opção desejada: ");
-            opcao = scanner.nextInt();
+            opcao = teclado.nextInt();
 
             switch (opcao) {
                 case 1:
@@ -45,7 +45,7 @@ public class Exe10 {
             }
         } while (opcao != 8);
 
-        scanner.close();
+        teclado.close();
     }
 
     public static void exibirMenu() {
@@ -67,15 +67,16 @@ public class Exe10 {
             return;
         }
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
 
         System.out.print("Digite o valor a ser incluído: ");
-        int valor = scanner.nextInt();
+        int valor = teclado.nextInt();
 
         vetor[tamanho] = valor;
         tamanho++;
 
         System.out.println("Valor incluído no vetor.");
+        teclado.close();
     }
 
     public static void pesquisarValor() {
@@ -84,10 +85,10 @@ public class Exe10 {
             return;
         }
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
 
         System.out.print("Digite o valor a ser pesquisado: ");
-        int valor = scanner.nextInt();
+        int valor = teclado.nextInt();
 
         for (int i = 0; i < tamanho; i++) {
             if (vetor[i] == valor) {
@@ -97,6 +98,7 @@ public class Exe10 {
         }
 
         System.out.println("O valor não está presente no vetor.");
+        teclado.close();
     }
 
     public static void alterarValor() {
@@ -105,13 +107,13 @@ public class Exe10 {
             return;
         }
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
 
         System.out.print("Digite o número a ser alterado: ");
-        int numeroAntigo = scanner.nextInt();
+        int numeroAntigo = teclado.nextInt();
 
         System.out.print("Digite o novo número: ");
-        int novoNumero = scanner.nextInt();
+        int novoNumero = teclado.nextInt();
 
         for (int i = 0; i < tamanho; i++) {
             if (vetor[i] == numeroAntigo) {
@@ -120,8 +122,9 @@ public class Exe10 {
                 return;
             }
         }
-
+        
         System.out.println("Número não encontrado no vetor.");
+        teclado.close();
     }
 
     public static void excluirValor() {
@@ -130,10 +133,10 @@ public class Exe10 {
             return;
         }
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
 
         System.out.print("Digite o valor a ser excluído: ");
-        int valor = scanner.nextInt();
+        int valor = teclado.nextInt();
 
         int posicao = -1;
 
@@ -146,7 +149,6 @@ public class Exe10 {
 
         if (posicao == -1) {
             System.out.println("Valor não encontrado no vetor.");
-            return;
         }
 
         for (int i = posicao; i < tamanho - 1; i++) {
@@ -155,6 +157,7 @@ public class Exe10 {
 
         tamanho--;
         System.out.println("Valor excluído do vetor.");
+        teclado.close();
     }
 
     public static void mostrarValores() {
