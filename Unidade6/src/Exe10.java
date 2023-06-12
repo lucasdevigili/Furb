@@ -90,6 +90,8 @@ public class Exe10 {
         System.out.print("Digite o valor a ser pesquisado: ");
         int valor = teclado.nextInt();
 
+        teclado.close();
+
         for (int i = 0; i < tamanho; i++) {
             if (vetor[i] == valor) {
                 System.out.println("O valor está presente no vetor.");
@@ -98,7 +100,6 @@ public class Exe10 {
         }
 
         System.out.println("O valor não está presente no vetor.");
-        teclado.close();
     }
 
     public static void alterarValor() {
@@ -115,6 +116,8 @@ public class Exe10 {
         System.out.print("Digite o novo número: ");
         int novoNumero = teclado.nextInt();
 
+        teclado.close();
+
         for (int i = 0; i < tamanho; i++) {
             if (vetor[i] == numeroAntigo) {
                 vetor[i] = novoNumero;
@@ -122,7 +125,7 @@ public class Exe10 {
                 return;
             }
         }
-        
+
         System.out.println("Número não encontrado no vetor.");
         teclado.close();
     }
