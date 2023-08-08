@@ -28,7 +28,6 @@ void loop() {
 Servo MeuServo;
 
 void setup() {
-  // put your setup code here, to run once:
   pinMode(A0, OUTPUT);
   pinMode(A1, INPUT);
   Serial.begin(9600);
